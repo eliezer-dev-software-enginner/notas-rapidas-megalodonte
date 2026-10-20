@@ -1,15 +1,7 @@
 {
   "version": 1,
-  "id": "home",
+  "id": "list",
   "states": {
-    "title": {
-      "type": "string",
-      "initial": ""
-    },
-    "body": {
-      "type": "string",
-      "initial": ""
-    },
     "number": {
       "type": "string",
       "initial": ""
@@ -46,34 +38,21 @@
           {
             "type": "Text",
             "props": {
-              "text": "Registre ideias no seu aparelho."
-            }
-          },
-          {
-            "type": "Input",
-            "props": {
-              "placeholder": "Título"
-            },
-            "bind": {
-              "value": "title"
-            }
-          },
-          {
-            "type": "TextArea",
-            "props": {
-              "placeholder": "Escreva sua nota",
-              "height": 120
-            },
-            "bind": {
-              "value": "body"
+              "text": "Suas ideias, salvas neste aparelho."
             }
           },
           {
             "type": "Button",
             "props": {
-              "text": "Salvar nota",
-              "action": "save",
+              "text": "Nova nota",
+              "action": "new",
               "fillWidth": true
+            }
+          },
+          {
+            "type": "Text",
+            "bind": {
+              "text": "notes"
             }
           },
           {
@@ -105,12 +84,6 @@
             "type": "Text",
             "bind": {
               "text": "status"
-            }
-          },
-          {
-            "type": "Text",
-            "bind": {
-              "text": "notes"
             }
           }
         ]

@@ -23,6 +23,10 @@ Project with Gradle Files** to refresh the local framework modules.
 
 Create, open, and delete local notes. Titles and bodies persist on the device with SharedPreferences.
 
-Enter a title and body, then tap Save. Enter a note number to open or delete it. Saving an opened note creates a new copy.
+The Java host registers `/notes` and `/editor` with Megalodonte's `AndroidRouter`.
+Both screens are JSONC assets (`list.view.jsonc` and `editor.view.jsonc`). Tap
+**Nova nota** to navigate to the editor; Save returns to the list. Enter a
+note number and tap **Abrir nota** to edit the existing note, or **Excluir nota**
+to delete it. The editor's Voltar button and Android Back return to the list.
 
 The project was generated with `megalodonte-cli --platform android --mode jsonc` and then completed as a functional sample. Run `./gradlew :app:assembleDebug :app:lintDebug :app:check` to validate it. The UI is native Android through Megalodonte; no WebView is used.
