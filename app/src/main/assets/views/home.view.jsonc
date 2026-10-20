@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "id": "home",
+  "states": {
+    "title": {
+      "type": "string",
+      "initial": ""
+    },
+    "body": {
+      "type": "string",
+      "initial": ""
+    },
+    "number": {
+      "type": "string",
+      "initial": ""
+    },
+    "notes": {
+      "type": "string",
+      "initial": ""
+    },
+    "status": {
+      "type": "string",
+      "initial": ""
+    }
+  },
+  "view": {
+    "type": "Scroll",
+    "children": [
+      {
+        "type": "Column",
+        "props": {
+          "padding": 20,
+          "spacing": 12,
+          "fillWidth": true
+        },
+        "children": [
+          {
+            "type": "Text",
+            "props": {
+              "text": "Notas Rápidas"
+            },
+            "style": {
+              "fontSize": 28
+            }
+          },
+          {
+            "type": "Text",
+            "props": {
+              "text": "Registre ideias no seu aparelho."
+            }
+          },
+          {
+            "type": "Input",
+            "props": {
+              "placeholder": "Título"
+            },
+            "bind": {
+              "value": "title"
+            }
+          },
+          {
+            "type": "TextArea",
+            "props": {
+              "placeholder": "Escreva sua nota",
+              "height": 120
+            },
+            "bind": {
+              "value": "body"
+            }
+          },
+          {
+            "type": "Button",
+            "props": {
+              "text": "Salvar nota",
+              "action": "save",
+              "fillWidth": true
+            }
+          },
+          {
+            "type": "Input",
+            "props": {
+              "placeholder": "Número da nota"
+            },
+            "bind": {
+              "value": "number"
+            }
+          },
+          {
+            "type": "Button",
+            "props": {
+              "text": "Abrir nota",
+              "action": "open",
+              "fillWidth": true
+            }
+          },
+          {
+            "type": "Button",
+            "props": {
+              "text": "Excluir nota",
+              "action": "delete",
+              "fillWidth": true
+            }
+          },
+          {
+            "type": "Text",
+            "bind": {
+              "text": "status"
+            }
+          },
+          {
+            "type": "Text",
+            "bind": {
+              "text": "notes"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
